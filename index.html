@@ -1,82 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
-    <!-- Estructura completa del documento HTML (html, head, body)
-Título de la página
-Encabezados (h1, h2)
-Párrafos descriptivos
-Una lista de intereses o habilidades
-Una imagen
-Un formulario de contacto simple que incluya:
-Campo nombre
-Campo correo electrónico
-Campo mensaje
-Botón de envío-->
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial_scale=1.0" />
-        <title> Mi pagina web: H-Universitario!</title>
-        <style>
-            body{
-                background-color: beige;
-                font-family: Arial, Helvetica, sans-serif
-            }
-
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>Desarrollo para el hospital Hospital Universitario</h1>
-            <h2>Bienvenidos a mi sitio web!</h2>
-            <p>Mi nombre es Gonzalo Tapia y me encata aprender todo lo relacionado a hmtl y css, me significa un desafio pero eso hace que me guste mas y me motive para aprender</p>
-        </header>
-        
-        <main>
-            <section>
-                <img src="img-hospital-universitario.jpg" alt="Hospital Universitario" width="200px" height="200px">
-            </section>
-            <hr>
-            <section>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi página web: H-Universitario!</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1 class="titulo-principal">Desarrollo para el Hospital Universitario</h1>
+        <h2 class="subtitulo">¡Bienvenidos a mi sitio web!</h2>
+        <p class="descripcion-perfil">Mi nombre es Gonzalo Tapia y me encanta aprender todo lo relacionado a HTML y CSS. Me significa un desafío, pero eso hace que me guste más y me motive para aprender.</p>
+    </header>
+    
+    <main>
+        <!-- Sección organizada con Flexbox para tus habilidades y metas -->
+        <section class="contenedor-flex">
+            <article class="tarjeta">
                 <h3>Mis habilidades e intereses</h3>
                 <ul>
-                    <li>Ingles: Avanzado</li>
+                    <li>Inglés: Avanzado</li>
                     <li>Python: Nivel Intermedio</li>
-                    <li>HTML: Nivel Basico-Intermedio</li>
-                    <li>CSS: Nivel Basico</li>
-                    <li>Git/GitHub: Nivel Basico</li>
+                    <li>HTML: Nivel Básico-Intermedio</li>
+                    <li>CSS: Nivel Básico</li>
+                    <li>Git/GitHub: Nivel Básico</li>
                     <li>Habilidades blandas</li>
                 </ul>
-            </section>
-            <hr>
-            <section>
-                <h3>Contacto</h3>
-                <p>Si le gustaria trabajar conmigo o simplemente dejar un saludo:</p>
-                <form action="#" method="POST">
-                    <div>
-                    <label for="nombre">Nombre:</label><br>
-                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
-                    </div>
-                    <br>
+            </article>
 
-                    <div>
-                        <label for="correo">Correo electrónico:</label><br>
+            <article class="tarjeta">
+                <h3>Mis metas en el desarrollo web</h3>
+                <ul>
+                    <li>Crear interfaces adaptables.</li>
+                    <li>Aprender frameworks avanzados.</li>
+                    <li>Construir proyectos reales.</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- Sección de fotos e información del hospital -->
+        <section class="seccion-media">
+            <article class="bloque-foto">
+                <p>Estudio en el Hospital Universitario, que por fuera se ve algo así:</p>
+                <img src="img-hospital-universitario.jpg" alt="Hospital Universitario" class="foto-galeria">
+            </article>
+            <article class="bloque-foto">
+                <p>Mi foto de perfil:</p>
+                <img src="gonzalotapiaperfil.jpeg" alt="Foto de perfil de Gonzalo Tapia" class="foto-perfil">
+            </article>
+        </section>
+
+        <!-- Sección del Formulario de Contacto -->
+        <section class="seccion-contacto">
+            <article class="tarjeta-formulario">
+                <h3>Contacto</h3>
+                <p>Si le gustaría trabajar conmigo o simplemente dejar un saludo:</p>
+                <form action="#" method="POST" class="formulario">
+                    <div class="grupo-control">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                    </div>
+
+                    <div class="grupo-control">
+                        <label for="correo">Correo electrónico:</label>
                         <input type="email" id="correo" name="correo" placeholder="porejemplo@tucorreo.com" required>
                     </div>
-                    <br>
 
-                    <div>
-                        <label for="mensaje">Mensaje:</label><br>
-                        <textarea name="mensaje" id="mensaje" rows="4" cols="30" placeholder="Escribe tu mensaje aca" required></textarea>
+                    <div class="grupo-control">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea name="mensaje" id="mensaje" rows="4" placeholder="Escribe tu mensaje acá" required></textarea>
                     </div>
-                    <br>
 
-                    <button type="submit">Enviar mensaje!</button>
+                    <button type="submit" class="boton-enviar">¡Enviar mensaje!</button>
                 </form>
-            </section>
-        </main>
-        <footer>
-            <p>2026 Creado con fines de practica</p>
-        </footer>
-        <button></button>
-        
-    </body>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Creado con fines de práctica por Gonzalo Tapia</p>
+    </footer>
+</body>
 </html>
