@@ -1,84 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi página web: H-Universitario!</title>
-    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H-Universitario - Bootstrap Landing</title>
+    <!-- CSS de Bootstrap 5 -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <style>
+        .foto-tarjeta {
+            height: 250px;
+            object-fit: cover;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1 class="titulo-principal">Desarrollo para el Hospital Universitario</h1>
-        <h2 class="subtitulo">¡Bienvenidos a mi sitio web!</h2>
-        <p class="descripcion-perfil">Mi nombre es Gonzalo Tapia y me encanta aprender todo lo relacionado a HTML y CSS. Me significa un desafío, pero eso hace que me guste más y me motive para aprender.</p>
+<body class="bg-light">
+
+    <!-- 1. BARRA DE NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Hospital Universitario</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#caracteristicas">Características</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. SECCIÓN PRINCIPAL: HERO -->
+    <header id="inicio" class="bg-dark text-white text-center py-5" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img-hospital-universitario.jpg') no-repeat center/cover;">
+        <div class="container my-5">
+            <h1 class="display-4 fw-bold">Desarrollo para el Hospital Universitario</h1>
+            <p class="lead text-light mx-auto" style="max-width: 800px;">
+                Mi nombre es Gonzalo Tapia y este es mi espacio de desarrollo profesional adaptado con Bootstrap 5. 
+                Aprender tecnologías frontend es un desafío constante que impulsa mi crecimiento.
+            </p>
+            <a href="#contacto" class="btn btn-primary btn-lg mt-3 px-4 fw-bold">Contactar conmigo</a>
+        </div>
+        
     </header>
-    
-    <main>
-        <!-- Sección organizada con Flexbox para tus habilidades y metas -->
-        <section class="contenedor-flex">
-            <article class="tarjeta">
-                <h3>Mis habilidades e intereses</h3>
-                <ul>
-                    <li>Inglés: Avanzado</li>
-                    <li>Python: Nivel Intermedio</li>
-                    <li>HTML: Nivel Básico-Intermedio</li>
-                    <li>CSS: Nivel Básico</li>
-                    <li>Git/GitHub: Nivel Básico</li>
-                    <li>Habilidades blandas</li>
-                </ul>
-            </article>
 
-            <article class="tarjeta">
-                <h3>Mis metas en el desarrollo web</h3>
-                <ul>
-                    <li>Crear interfaces adaptables.</li>
-                    <li>Aprender frameworks avanzados.</li>
-                    <li>Construir proyectos reales.</li>
-                </ul>
-            </article>
-        </section>
-
-        <!-- Sección de fotos e información del hospital -->
-        <section class="seccion-media">
-            <article class="bloque-foto">
-                <p>Estudio en el Hospital Universitario, que por fuera se ve algo así:</p>
-                <img src="img-hospital-universitario.jpg" alt="Hospital Universitario" class="foto-galeria">
-            </article>
-            <article class="bloque-foto">
-                <p>Mi foto de perfil:</p>
-                <img src="gonzalotapiaperfil.jpeg" alt="Foto de perfil de Gonzalo Tapia" class="foto-perfil">
-            </article>
-        </section>
-
-        <!-- Sección del Formulario de Contacto -->
-        <section class="seccion-contacto">
-            <article class="tarjeta-formulario">
-                <h3>Contacto</h3>
-                <p>Si le gustaría trabajar conmigo o simplemente dejar un saludo:</p>
-                <form action="#" method="POST" class="formulario">
-                    <div class="grupo-control">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+    <!-- 3. SECCIÓN DE CARACTERÍSTICAS (SISTEMA DE GRILLAS) -->
+    <main class="container my-5" id="caracteristicas">
+        <h2 class="text-center mb-4 text-primary fw-bold">Mis Habilidades y Metas</h2>
+        
+        <div class="row g-4">
+            <!-- Tarjeta 1: Habilidades -->
+            <div class="col-12 col-md-6">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="gonzalotapiaperfil.jpeg" class="card-img-top foto-tarjeta" alt="Foto de Perfil de Gonzalo">
+                    <div class="card-body">
+                        <h3 class="card-title h5 text-primary fw-bold">Mis Habilidades</h3>
+                        <p class="card-text">Herramientas técnicas y competencias clave que desarrollo actualmente:</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">🗣️ Inglés: Avanzado</li>
+                            <li class="list-group-item">🐍 Python: Nivel Intermedio</li>
+                            <li class="list-group-item">🌐 HTML & CSS: Estructuras y Estilos modernos</li>
+                            <li class="list-group-item">🐙 Git/GitHub: Control de versiones</li>
+                        </ul>
                     </div>
+                </div>
+            </div>
 
-                    <div class="grupo-control">
-                        <label for="correo">Correo electrónico:</label>
-                        <input type="email" id="correo" name="correo" placeholder="porejemplo@tucorreo.com" required>
+            <!-- Tarjeta 2: Metas -->
+            <div class="col-12 col-md-6">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="img-hospital-universitario.jpg" class="card-img-top foto-tarjeta" alt="Hospital Universitario">
+                    <div class="card-body">
+                        <h3 class="card-title h5 text-primary fw-bold">Objetivos de Desarrollo</h3>
+                        <p class="card-text">Metas a corto y largo plazo enfocadas en la optimización de interfaces:</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">📱 Crear interfaces web 100% adaptables</li>
+                            <li class="list-group-item">⚡ Dominar frameworks avanzados (Bootstrap, Tailwind)</li>
+                            <li class="list-group-item">💼 Construir proyectos reales para entornos de salud</li>
+                        </ul>
                     </div>
-
-                    <div class="grupo-control">
-                        <label for="mensaje">Mensaje:</label>
-                        <textarea name="mensaje" id="mensaje" rows="4" placeholder="Escribe tu mensaje acá" required></textarea>
-                    </div>
-
-                    <button type="submit" class="boton-enviar">¡Enviar mensaje!</button>
-                </form>
-            </article>
-        </section>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2026 - Creado con fines de práctica por Gonzalo Tapia</p>
+    <!-- 4. SECCIÓN DE CONTACTO -->
+    <section id="contacto" class="bg-white py-5 border-top">
+        <div class="container" style="max-width: 600px;">
+            <div class="text-center mb-4">
+                <h2 class="text-primary fw-bold">Contacto</h2>
+                <p class="text-muted">Si te gustaría trabajar conmigo o simplemente dejar un saludo:</p>
+            </div>
+
+            <form action="#" method="POST" class="p-4 border rounded shadow-sm bg-light">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label fw-bold">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre completo" required>
+                </div>
+                <div class="mb-3">
+                    <label for="correo" class="form-label fw-bold">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" class="form-control" placeholder="porejemplo@tucorreo.com" required>
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label fw-bold">Mensaje:</label>
+                    <textarea name="mensaje" id="mensaje" rows="4" class="form-control" placeholder="Escribe tu mensaje acá" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 fw-bold py-2">¡Enviar mensaje!</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="bg-dark text-secondary text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 - Diseñado con Bootstrap -5 por Gonzalo Tapia</p>
+        </div>
     </footer>
+
+    <!-- JS de Bootstrap -->
+    <script src="bootstrap.min.css" ></script>
 </body>
 </html>

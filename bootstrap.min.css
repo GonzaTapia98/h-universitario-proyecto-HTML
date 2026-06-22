@@ -1,0 +1,54 @@
+/*!
+ * Bootstrap v5.3.3 Simplificado para Grillas y Tarjetas
+ */
+:root {
+  --bs-blue: #0d6efd;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+}
+*, ::after, ::before { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; font-size: 1rem; font-weight: 400; line-height: 1.5; color: #212529; background-color: #fff; }
+h1, h2, h3 { margin-top: 0; margin-bottom: .5rem; font-weight: 500; line-height: 1.2; }
+.container { width: 100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto; max-width: 1140px; }
+.row { display: flex; flex-wrap: wrap; margin-top: -24px; margin-right: -12px; margin-left: -12px; }
+.row > * { flex-shrink: 0; width: 100%; max-width: 100%; padding-right: 12px; padding-left: 12px; margin-top: 24px; }
+@media (min-width: 768px) { .col-md-6 { flex: 0 0 auto; width: 50%; } }
+.navbar { position: relative; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding-top: .5rem; padding-bottom: .5rem; }
+.navbar-brand { padding-top: .3125rem; padding-bottom: .3125rem; margin-right: 1rem; font-size: 1.25rem; text-decoration: none; white-space: nowrap; }
+.navbar-nav { display: flex; flex-direction: column; padding-left: 0; margin-bottom: 0; list-style: none; }
+@media (min-width: 992px) { .navbar-expand-lg { flex-flow: row nowrap; justify-content: flex-start; } .navbar-expand-lg .navbar-nav { flex-direction: row; } .ms-auto { margin-left: auto!important; } }
+.bg-primary { background-color: #005b94!important; }
+.bg-light { background-color: #f0f4f8!important; }
+.bg-dark { background-color: #212529!important; }
+.text-white { color: #fff!important; }
+.text-center { text-align: center!important; }
+.py-5 { padding-top: 3rem!important; padding-bottom: 3rem!important; }
+.my-5 { margin-top: 3rem!important; margin-bottom: 3rem!important; }
+.mb-4 { margin-bottom: 1.5rem!important; }
+.fw-bold { font-weight: 700!important; }
+.card { position: relative; display: flex; flex-direction: column; min-width: 0; word-wrap: break-word; background-color: #fff; background-clip: border-box; border: 1px solid rgba(0,0,0,.125); border-radius: .25rem; }
+.card-body { flex: 1 1 auto; padding: 1rem; }
+.card-img-top { width: 100%; border-top-left-radius: calc(.25rem - 1px); border-top-right-radius: calc(.25rem - 1px); }
+.list-group { display: flex; flex-direction: column; padding-left: 0; margin-bottom: 0; border-radius: .25rem; }
+.list-group-item { position: relative; display: block; padding: .5rem 1rem; color: #212529; text-decoration: none; background-color: #fff; border: 1px solid rgba(0,0,0,.125); }
+.form-control { display: block; width: 100%; padding: .375rem .75rem; font-size: 1rem; font-weight: 400; line-height: 1.5; color: #212529; background-color: #fff; border: 1px solid #ced4da; border-radius: .25rem; }
+.btn { display: inline-block; font-weight: 400; line-height: 1.5; text-align: center; text-decoration: none; vertical-align: middle; cursor: pointer; user-select: none; background-color: transparent; border: 1px solid transparent; padding: .375rem .75rem; font-size: 1rem; border-radius: .25rem; }
+.btn-primary { color: #fff; background-color: #005b94; border-color: #005b94; }
+.w-100 { width: 100%!important; }
+.shadow-sm { box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important; }
+/* Corrección para estirar el menú en computadoras */
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse { display: flex!important; flex-basis: auto; }
+    .navbar-expand-lg .navbar-nav { flex-direction: row; }
+    .navbar-expand-lg .navbar-nav .nav-link { padding-right: .5rem; padding-left: .5rem; }
+}
+.navbar-brand { color: #fff!important; }
+.nav-link { color: rgba(255,255,255,.55)!important; text-decoration: none; }
+.nav-link.active, .nav-link:hover { color: #fff!important; }
+
